@@ -1,5 +1,5 @@
-name: xray-cicd
-user: username      # DKube login user name
+name: xray-ag-ci
+user: abhishek-goyal-tfs      # DKube login user name
 parameters:
   class: training
   training:
@@ -15,14 +15,14 @@ parameters:
     datums:
       workspace:
         data:
-          name: 'username:xray-cicd'    # <Dkube login name>:<Code repo name>
+          name: 'abhishek-goyal-tfs:xray-ag-v1'    # <Dkube login name>:<Code repo name>
           version: ''
         script: python chest-xray/training.py
       datasets:
-        - name: 'username:xray-cicd'    # <Dkube login name>:<Dataset repo name>
+        - name: 'abhishek-goyal-tfs:xray-ag-v1'    # <Dkube login name>:<Dataset repo name>
           mountpath: '/data'
       outputs:
-        - name: 'username:xray-cicd'    # <DKube login name>:<Model repo name>
+        - name: 'abhishek-goyal-tfs:xray-ag-v1'    # <DKube login name>:<Model repo name>
           mountpath: '/model'
     featuresets: {}
     tags: []
